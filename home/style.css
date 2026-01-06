@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* DEFAULT (LIGHT MODE) */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* INTRO */
+.intro {
+  max-width: 520px;
+  line-height: 1.7;
+  color: #000000;
+}
+
+/* SOCIAL ICONS */
+.socials a {
+  font-size: 20px;
+  color: #000000;
+  margin-right: 18px;
+  transition: 0.3s ease;
+}
+
+.socials a:hover {
+  color: #0d6efd;
+  transform: translateY(-4px);
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+  width: 260px;
+  border-radius: 30px;
+  /* Added object-fit so image doesn't stretch */
+  object-fit: cover; 
+}
+
+.profile-img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* INFO CARDS */
+.info-card {
+  background: #eeeeee3b;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.06);
+  height: 100%;
+  transition: 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+}
+
+.info-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-card ul li {
+  margin-bottom: 8px;
+  color: #8a8989;
+}
+
+.gallery-scroll {
+  display: flex;
+  overflow-x: auto; 
+  gap: 20px;
+  padding-bottom: 20px; 
+  scrollbar-width: thin; 
+}
+
+/* Custom Scrollbar for Chrome/Safari */
+.gallery-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.gallery-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.gallery-scroll::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 10px;
+}
+
+.gallery-scroll img {
+  height: 250px; 
+  width: auto;   
+  border-radius: 20px; 
+  filter: grayscale(100%); 
+  transition: 0.4s ease;
+  flex-shrink: 0; 
+  cursor: pointer;
+}
+
+.gallery-scroll img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+
+/* DARK MODE */
+body.dark-mode {
+  background-color: #121212;
+  color: #eaeaea;
+}
+
+body.dark-mode .intro {
+  color: #cfcfcf;
+}
+
+body.dark-mode .info-card {
+  background: #1e1e1e;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .text-muted {
+  color: #aaaaaa !important;
+}
+
+body.dark-mode .socials a {
+  color: #eaeaea;
+}
+
+body.dark-mode .socials a:hover {
+  color: #0d6efd;
+}
+
+body.dark-mode .btn-outline-secondary {
+  border-color: #121212;
+  color: #fff9f9;
+}
+
+body.dark-mode .btn-outline-secondary:hover {
+  background-color: #eaeaea;
+  color: #fffdfd;
+}
+
+/* Dark Mode specific for Scrollbar */
+body.dark-mode .gallery-scroll::-webkit-scrollbar-thumb {
+  background: #444;
+}
